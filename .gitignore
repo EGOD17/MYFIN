@@ -1,0 +1,16 @@
+.next/
+out/
+.vercel/
+.turbo/
+node_modules/
+dist/
+build/
+.cache/
+*.log
+.env
+.env.*
+.firebase/
+firebase-debug.log
+.DS_Store
+Thumbs.db
+*.zip
