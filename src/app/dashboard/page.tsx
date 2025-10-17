@@ -429,11 +429,14 @@ function DashboardComponent() {
               </Button>
             </LoadingLink>
             <Button
-              className="flex h-20 flex-col gap-2"
+              className="flex h-20 flex-col gap-1 py-2"
               onClick={() => setIsShareModalOpen(true)}
             >
               <Share2 className="h-6 w-6" />
-              <span>Share App</span>
+              <div className="flex flex-col items-center">
+                <span className="font-semibold">Share App</span>
+                <p className="text-xs font-normal text-primary-foreground/80">Refer to get reward</p>
+              </div>
             </Button>
             <LoadingLink href={getLinkWithParams('/dashboard/community')}>
                 <Button asChild className="flex h-20 flex-col gap-2 w-full">
@@ -523,7 +526,7 @@ function DashboardComponent() {
             </DialogDescription>
           </DialogHeader>
           <div className="flex justify-center p-4 bg-white rounded-md">
-            {appUrl && <QRCode value={appUrl} size={256} />}
+            <QRCode value="https://myfin-two.vercel.app/" size={256} />
           </div>
           <DialogFooter>
             <Button onClick={() => setIsShareModalOpen(false)}>Close</Button>
@@ -558,5 +561,3 @@ export default function DashboardPage() {
     </Suspense>
   );
 }
-
-    
